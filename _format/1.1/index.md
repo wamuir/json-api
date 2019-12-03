@@ -556,13 +556,14 @@ key in an [error object]'s links object, each key present in a links object
 
 In the example below, the `self` link is simply a URI string, whereas the
 `related` link uses the object form to provide meta information about a
-related resource collection:
+related resource collection as well as a schema for that collection:
 
 ```json
 "links": {
-  "self": "http://example.com/articles/1",
+  "self": "http://example.com/articles/1/relationships/comments",
   "related": {
     "href": "http://example.com/articles/1/comments",
+    "describedby": "http://example.com/schemas/article-comments",
     "meta": {
       "count": 10
     }
